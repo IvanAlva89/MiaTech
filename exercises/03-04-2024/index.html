@@ -25,5 +25,83 @@
             </li>
         </ul>
     </nav>
+    <main>
+        <section>
+            <article>
+                <h3>Title of the post</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod aperiam autem laboriosam expedita corporis consectetur fuga voluptas commodi voluptate, delectus id hic sunt magnam inventore, ea ab iure voluptatum! Impedit.
+                Possimus similique quia sit in accusamus ducimus? Veniam provident, reiciendis sit dignissimos dolor, voluptatum ut eveniet accusamus molestiae necessitatibus adipisci, quos quibusdam repudiandae dolores facere. Magnam officiis tempore quia fugit!</p>
+            </article>
+            <picture>
+                <img 
+                    src="https://media.cnn.com/api/v1/images/stellar/prod/210316134738-02-wisdom-project-summer.jpg?q=x_4,y_0,h_2003,w_3560,c_crop/h_653,w_1160/f_webp" 
+                    alt="summer picture"
+                    width="250px"
+                    height="250px"
+                >
+                <figcaption>That season that reminds us to come alive</figcaption>
+            </picture>
+        </section>
+        <section>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, pariatur eaque, velit doloremque rerum dolorum dolor ipsum fugiat quas perspiciatis dicta in error tempora voluptates debitis! Doloribus illo nostrum id!
+            Totam quae molestias deserunt pariatur quo? Dolorum, consectetur itaque? Suscipit debitis id commodi minus corrupti blanditiis ratione cumque asperiores dolor possimus, delectus magnam voluptates veritatis sed dolorum quae a esse.
+            Praesentium labore maxime ipsam architecto est tenetur corrupti, nobis deserunt ullam sit commodi consectetur explicabo fugit voluptates libero! Maxime vero eveniet quisquam amet aspernatur possimus excepturi atque pariatur totam ea.
+            In odit eaque necessitatibus fugiat ducimus eligendi molestiae doloremque minima sunt, distinctio quis consectetur aut ex veniam ut labore quaerat ipsam dolore dolorem amet temporibus! Perferendis odit quos labore molestias!</p>
+        </section>
+        <section>
+            <form action="/actions.php" method="post">
+                <label for="email">E-mail</label>
+                <input 
+                    type="email" 
+                    id="email"
+                    name="email" 
+                    placeholder="Enter your e-mail"
+                    required
+                >
+
+                <fieldset>
+                    <legend>Select your gender:</legend>
+        
+                    <input 
+                        type="radio" 
+                        id="female" 
+                        name="gender" 
+                        value="female" 
+                        required
+                    >
+                    <label for="female">Female</label>
+        
+                    <input 
+                        type="radio" 
+                        id="male" 
+                        name="gender" 
+                        value="male"
+                    >
+                    <label for="male">Male</label>
+                </fieldset>
+
+                <div>
+                    <input 
+                        type="checkbox" 
+                        id="terms"
+                        name="terms" 
+                        value="terms" 
+                        required
+                    >
+                    <label for="terms">I have read and agree to these Terms and Conditions.</label><br>
+                    <input 
+                        type="checkbox" 
+                        id="privacy" 
+                        name="privacy" 
+                        value="privacy" 
+                        required
+                    >
+                    <label for="privacy">I have read and agree Privacy Policy</label>
+                </div>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
 </body>
 </html>
