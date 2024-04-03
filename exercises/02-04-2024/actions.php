@@ -8,8 +8,8 @@
 <body>
     
     <?php 
-        $name = $_GET['name'];
-        $surname = $_GET['surname'];
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
     ?>
 
     <h2>Welcome <?php echo $name; ?> <?php echo $surname; ?></h2>
