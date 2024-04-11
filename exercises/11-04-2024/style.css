@@ -78,3 +78,8 @@ p {
 #id-paragraph {
     color: black;
 }
+
+.inheritance {
+    color: #380446;
+    text-align: center;
+}
