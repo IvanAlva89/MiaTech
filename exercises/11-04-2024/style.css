@@ -27,3 +27,7 @@ p {
     color: blue;
     text-align: right;
 }
+
+.text-xl {
+    font-size: 30px;
+}
