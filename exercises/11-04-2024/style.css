@@ -51,3 +51,7 @@ p {
 h1, .text-xl, p {
     letter-spacing: 3px;
 }
+
+a:hover {
+    color: #fff;
+}
