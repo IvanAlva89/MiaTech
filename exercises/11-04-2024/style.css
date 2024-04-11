@@ -55,3 +55,14 @@ h1, .text-xl, p {
 a:hover {
     color: #fff;
 }
+
+ul li.last-item::before {
+    content: "5";
+    color: red;
+    font-weight: bold;
+}
+
+ul li.last-item::after {
+    content: "😎";
+    border: 2px solid pink;
+}
