@@ -29,7 +29,7 @@ h6 {
 
 p {
     color: blue;
-    text-align: right;
+    /* text-align: right; */
 }
 
 .text-xl {
@@ -65,4 +65,16 @@ ul li.last-item::before {
 ul li.last-item::after {
     content: "😎";
     border: 2px solid pink;
+}
+
+p {
+    color: orange;
+}
+
+.class-paragraph {
+    color: white;
+}
+
+#id-paragraph {
+    color: black;
 }
