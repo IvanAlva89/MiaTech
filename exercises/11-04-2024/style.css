@@ -62,8 +62,7 @@ ul li.last-item::before {
     font-weight: bold;
 }
 
-ul li.last-item::after {
-    content: "😎";
+ul li:last-child {
     border: 2px solid pink;
 }
 
