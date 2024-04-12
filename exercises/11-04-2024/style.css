@@ -90,3 +90,7 @@ p {
 .paragraph-2 {
     color: #ff0000;
 }
+
+.paragraph-3 {
+    color: rgba(255, 0, 0, 0.7);
+}
