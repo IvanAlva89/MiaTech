@@ -1,3 +1,11 @@
+:root {
+    --color-primary: red;
+}
+
+* {
+    color: var(--color-primary);
+}
+
 body {
     width: 500px;
     height: 500px;
