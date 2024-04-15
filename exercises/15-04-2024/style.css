@@ -1,0 +1,10 @@
+body {
+    width: 500px;
+    height: 500px;
+}
+
+.square-percentage {
+    background-color: black;
+    width: 50%;
+    height: 50%;
+}
