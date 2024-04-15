@@ -15,3 +15,24 @@ body {
     height: 100px;
     margin-top: 10px;
 }
+
+.paragraph {
+    font-size: 10px;
+}
+
+.paragraph-rem {
+    font-size: 7rem;
+    /* 
+       Il suo valore verrà calcolato in relazione alle dimensioni del carattere dell'elemento root,
+       in questo caso non ho dato un valore di font-size al body perciò prenderà come valore 
+       di riferimento 16px. 
+    */
+}
+
+.paragraph-em {
+    font-size: 7em;
+    /*
+        Il suo valore verrà calcolato in relazione alle dimensioni del carattere dell'elemento genitore,
+        perciò prendere come riferimento il valore font-size di paragraph (10px).
+    */
+}
