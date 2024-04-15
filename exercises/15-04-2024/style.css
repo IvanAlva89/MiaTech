@@ -1,5 +1,6 @@
 :root {
     --color-primary: red;
+    --padding-paragraph: 20px 10px;
 }
 
 * {
@@ -30,6 +31,7 @@ body {
 
 .paragraph-rem {
     font-size: 7rem;
+    padding: var(--padding-paragraph);
     /* 
        Il suo valore verrà calcolato in relazione alle dimensioni del carattere dell'elemento root,
        in questo caso non ho dato un valore di font-size al body perciò prenderà come valore 
