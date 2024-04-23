@@ -80,3 +80,7 @@ main .col-center {
 footer {
     padding: 20px;
 }
+
+.paragraph-hidden {
+    display: none;
+}
