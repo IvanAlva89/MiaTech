@@ -1,9 +1,9 @@
-body{
+body {
     border: 1px solid blue;
 }
 
 .box-1 {
-    border: 1px solid red;
+    border: 3px solid black;
     padding: 10px;
     margin: 50px;
 }
