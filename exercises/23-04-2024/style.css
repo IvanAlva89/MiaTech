@@ -84,3 +84,7 @@ footer {
 .paragraph-hidden {
     display: none;
 }
+
+.section-image img {
+    float: right;
+}
