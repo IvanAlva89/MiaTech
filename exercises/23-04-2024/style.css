@@ -85,6 +85,6 @@ footer {
     display: none;
 }
 
-.section-image img {
-    float: right;
+.section-image p {
+    float: left;
 }
