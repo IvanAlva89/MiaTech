@@ -98,3 +98,11 @@ footer {
 .section-image img {
     float: right;
 }
+
+.paragraphs p {
+    float: left;
+    background-color: aqua;
+    width: 32.3%;
+    height: 200px;
+    margin-right: 1%;
+}
