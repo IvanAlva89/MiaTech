@@ -1,5 +1,6 @@
 body {
     border: 1px solid blue;
+    position: relative;
 }
 
 .box-1 {
@@ -114,5 +115,14 @@ footer {
 
 .footer-bottom {
     position: relative;
+    bottom: 0;
+}
+
+.square {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
     bottom: 0;
 }
