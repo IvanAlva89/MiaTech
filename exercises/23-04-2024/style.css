@@ -106,3 +106,9 @@ footer {
     height: 200px;
     margin-right: 1%;
 }
+
+.navbar {
+    border: 1px solid red;
+    position: sticky;
+    top: 0;
+}
