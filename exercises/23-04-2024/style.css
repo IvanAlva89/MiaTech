@@ -126,3 +126,31 @@ footer {
     right: 0;
     bottom: 0;
 }
+
+.card {
+    width: 300px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card::after {
+    content: "x";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    width: 30px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    border-bottom-left-radius: 20%;
+    cursor: pointer;
+}
+
+.card .card__image img {
+    max-width: 100%;
+}
+
+.card .card__info {
+    padding: 10px;
+}
