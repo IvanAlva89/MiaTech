@@ -85,6 +85,16 @@ footer {
     display: none;
 }
 
+.section-image::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .section-image p {
     float: left;
+}
+
+.section-image img {
+    float: right;
 }
