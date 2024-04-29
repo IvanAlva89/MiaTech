@@ -32,4 +32,5 @@
 
 .item3 {
     background-color: red;
+    flex-grow: 1;
 }
