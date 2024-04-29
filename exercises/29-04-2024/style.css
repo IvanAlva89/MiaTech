@@ -24,11 +24,11 @@
 
 .item1 {
     background-color: green;
-    flex-shrink: 2;
 }
 
 .item2 {
     background-color: white;
+    flex-basis: 200px;
 }
 
 .item3 {
