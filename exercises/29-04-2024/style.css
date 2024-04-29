@@ -7,7 +7,7 @@
 .grid-container {
     background-color: #1f1f1f;
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(5, 1fr);
+    grid-template: 100px 200px / repeat(5, 1fr);
 }
 
 .grid-item {
