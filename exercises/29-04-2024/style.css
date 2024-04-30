@@ -6,8 +6,11 @@
 
 .grid-container {
     background-color: #1f1f1f;
+    height: 600px;
     display: grid;
-    grid-template: 100px 200px / repeat(5, 1fr);
+    grid-template: repeat(2, 100px) / repeat(5, 100px);
+    place-content: center;
+    gap: 10px;
 }
 
 .grid-item {
@@ -18,7 +21,7 @@
     align-items: center;
     text-align: center;
     padding: 10px;
-    border: 1px solid #313335;
+    border: 1px solid #0095ff;
     border-radius: 10px;
 }
 
