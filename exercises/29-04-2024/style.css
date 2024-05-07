@@ -4,7 +4,31 @@
     box-sizing: border-box;
 }
 
-.grid-calculator {
+.grid-container {
+    background-color: #1f1f1f;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-item {
+    color: #ffffff;
+    background-color: #444746;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #313335;
+    border-radius: 10px;
+}
+
+.item-8 {
+    grid-column-start: 3;
+    grid-column-end: 5; 
+}
+
+/* .grid-calculator {
     background-color: #1f1f1f;
     width: 400px;
     border-radius: 5px;
@@ -42,10 +66,7 @@
 
 .span-2 {
     grid-column: span 2;
-}
-
-
-
+} */
 
 
 
