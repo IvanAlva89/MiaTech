@@ -1,6 +1,7 @@
 $font-family: 'Open Sans', sans-serif;
 $font-size: 15px;
 $primary-color: #b700ff;
+$width: 100%;
 
 .bg-color {
     background-color: #e7e7e7;
@@ -33,4 +34,12 @@ nav {
             }
         }
     }
+}
+
+.paragraph-1 {
+    width: $width / 3;
+}
+
+.paragraph-2 {
+    width: $width;
 }
