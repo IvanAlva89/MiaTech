@@ -22,10 +22,14 @@
     @include color-theme($secondary-color, $bg-dark, $hover-dark)
 }
 
+@function cal-em($value-px, $font-size-px) {
+    @return calc($value-px / $font-size-px) * 1em;
+}
+
 nav {
     @extend .nav-dark-theme;
     font-family: $font-family;
-    font-size: $font-size;
+    font-size: $font-size-nav;
     ul {
         display: flex;
         justify-content: center;
@@ -42,14 +46,15 @@ nav {
             }
             a {
                 text-decoration: none;
-                font-size: 18px;
+                // font-size: 18px;
+                font-size: cal-em(50px, $font-size-nav);
             }
         }
     }
 }
 
 .paragraph-1 {
-    width: $width / 3;
+    width: calc($width / 3);
 }
 
 .paragraph-2 {
