@@ -7,11 +7,22 @@
 @mixin color-theme($text-color, $background-color, $hover-color){
     background-color: $background-color;
     a {
-        color: $text-color;
-        &:hover {
-            color: $hover-color;
+        @if $noHover == true {
+            color: $text-color;
+        } @else {
+            color: $text-color;
+            &:hover {
+                color: $hover-color;
+            }
         }
     }
+
+    // a {
+    //     color: $text-color;
+    //     &:hover {
+    //         color: $hover-color;
+    //     }
+    // }
 }
 
 .nav-light-theme {
