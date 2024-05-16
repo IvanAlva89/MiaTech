@@ -1,5 +1,25 @@
-.bg-color, nav ul li:last-child {
+.bg-color {
   background-color: #e7e7e7;
+}
+
+.nav-light-theme {
+  background-color: #ffffff;
+}
+.nav-light-theme a {
+  color: #b700ff;
+}
+.nav-light-theme a:hover {
+  color: #ff0000;
+}
+
+.nav-dark-theme, nav {
+  background-color: #000000;
+}
+.nav-dark-theme a, nav a {
+  color: #ffffff;
+}
+.nav-dark-theme a:hover, nav a:hover {
+  color: #ffff00;
 }
 
 nav {
@@ -20,12 +40,8 @@ nav ul li:last-child {
   border-color: #333333;
 }
 nav ul li a {
-  color: #b700ff;
   text-decoration: none;
   font-size: 18px;
-}
-nav ul li a:hover {
-  color: #ff0000;
 }
 
 .paragraph-1 {

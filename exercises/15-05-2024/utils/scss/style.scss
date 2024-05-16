@@ -1,10 +1,29 @@
 @import 'variables';
 
 .bg-color {
-    background-color: #e7e7e7;
+    background-color: $bg-color;
+}
+
+@mixin color-theme($text-color, $background-color, $hover-color){
+    background-color: $background-color;
+    a {
+        color: $text-color;
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}
+
+.nav-light-theme {
+    @include color-theme($primary-color, $bg-light, $hover-light)
+}
+
+.nav-dark-theme {
+    @include color-theme($secondary-color, $bg-dark, $hover-dark)
 }
 
 nav {
+    @extend .nav-dark-theme;
     font-family: $font-family;
     font-size: $font-size;
     ul {
@@ -14,7 +33,7 @@ nav {
         li {
             list-style: none;
             &:last-child {
-                @extend .bg-color;
+                // @extend .bg-color;
                 border: {
                     width: 2px;
                     style: solid;
@@ -22,12 +41,8 @@ nav {
                 }
             }
             a {
-                color: $primary-color;
                 text-decoration: none;
                 font-size: 18px;
-                &:hover {
-                    color: #ff0000;
-                }
             }
         }
     }
