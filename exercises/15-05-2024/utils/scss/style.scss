@@ -85,3 +85,23 @@ nav {
         }
     }
 }
+
+@each $color in $colors {
+    @if $color == #ff00ff {
+        .color-violet {
+            color: $color;
+        }
+    } @else if $color == #00ff00 {
+        .color-green {
+            color: $color;
+        }
+    } @else if $color == #0040ff {
+        .color-blue {
+            color: $color;
+        }
+    } @else {
+        .color-red {
+            color: $color;
+        }
+    }
+}
