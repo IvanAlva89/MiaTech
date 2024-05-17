@@ -46,10 +46,20 @@ nav ul li a {
 
 .paragraph-1 {
   width: 33.3333333333%;
+  color: #000000;
 }
 
 .paragraph-2 {
   width: 100%;
+  color: #ffffff;
+}
+
+.paragraph-1 {
+  background-color: #ffffff;
+}
+
+.paragraph-2 {
+  background-color: #000000;
 }
 
 /*# sourceMappingURL=style.css.map */

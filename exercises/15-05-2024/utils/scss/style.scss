@@ -7,7 +7,7 @@
 @mixin color-theme($text-color, $background-color, $hover-color){
     background-color: $background-color;
     a {
-        @if $noHover == true {
+        @if $noHover {
             color: $text-color;
         } @else {
             color: $text-color;
@@ -66,8 +66,22 @@ nav {
 
 .paragraph-1 {
     width: calc($width / 3);
+    color: $tertiary-color;
 }
 
 .paragraph-2 {
     width: $width;
+    color: $secondary-color;
+}
+
+@for $i from 1 through 2 {
+    @if $i == 1 {
+        .paragraph-#{$i} {
+            background-color: $bg-paragraph-1;
+        }
+    } @else {
+        .paragraph-#{$i} {
+            background-color: $bg-paragraph-2;
+        }
+    }
 }
