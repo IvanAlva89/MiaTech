@@ -1,7 +1,10 @@
-let number = 6;
+let score = parseInt(prompt("Inserisci un numero tra 0 e 100"));
 
-if(number > 5) {
-    console.log(`la variabile con valore ${number} è maggiore di 5`);
-} else {
-    console.log(`la variabile con valore ${number} è minore di 5`);
+while( isNaN(score) || score < 0 || score > 100 ) {
+    score = parseInt(prompt("Riprova inserendo un numero tra 0 e 100"));
 }
+
+if( score >= 90 && score <= 100 ) console.log(`Il tuo voto ${score} è ottimo`);
+else if ( score >= 70 && score <= 89 ) console.log(`Il tuo voto ${score} è buono`);
+else if ( score >= 60 && score <= 69 ) console.log(`Il tuo voto ${score} è sufficiente`);
+else console.log(`Il tuo voto ${score} è insufficiente`);
