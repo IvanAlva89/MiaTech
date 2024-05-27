@@ -1,8 +1,9 @@
-const number = [1, 2, 3 , 4, 5];
-let result = 0;
+const numbers = [1, 2, 3 , 4, 5];
+const reversedNumbers = [];
 
-for( let i = 0; i < number.length; i++ ){
-    result += number[i];
+for( let i = numbers.length-1 ; i >= 0; i-- ){
+    reversedNumbers.push( numbers[i] );
 }
 
-console.log(result);
+console.log(numbers);
+console.log(reversedNumbers);
