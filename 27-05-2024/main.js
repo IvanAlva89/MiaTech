@@ -7,3 +7,14 @@ let number = 8;
 }
 
 console.log(number);
+
+let outside = 1;
+
+{
+    let inside = 2;
+    console.log(inside);
+    console.log(outside);
+}
+
+console.log(inside); // Mostrerà un ReferenceError in consola in quanto la variable inside è solo visibile all'interno del blocco di codice.
+console.log(outside);
