@@ -1,7 +1,7 @@
-let word = prompt("Inserisci una parola che contenga minimo 5 caratteri ").trim();
+let number = 6;
 
-do {
-    word = prompt("Riprova Inserendo una parola che contenga minimo 5 caratteri").trim()
-} while (word.length < 5);
-
-console.log(word);
+if(number > 5) {
+    console.log(`la variabile con valore ${number} è maggiore di 5`);
+} else {
+    console.log(`la variabile con valore ${number} è minore di 5`);
+}
