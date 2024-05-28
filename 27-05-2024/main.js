@@ -5,7 +5,7 @@ const student = {
     school: "Michelangelo Institute"
 }
 
-console.log(Object.keys(student));
+console.log(Object.values(student));
 
 
 
