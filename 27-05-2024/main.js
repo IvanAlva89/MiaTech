@@ -4,4 +4,4 @@ const person = {
     city: "Milan"
 }
 
-console.log(person);
+console.log(person.age);
