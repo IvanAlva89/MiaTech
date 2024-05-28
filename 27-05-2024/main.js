@@ -5,4 +5,6 @@ const person = {
 }
 
 person.age = 30;
-console.log(person);
+person.job = "Engineer";
+
+console.log(person.job);
