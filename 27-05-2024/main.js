@@ -1,13 +1,9 @@
-const person = {
-    name: "John",
-    age: 21,
-    city: "Milan"
+function outerFunction(x){
+    function innerFunction(y){
+        return x + y;
+    }
+
+    return innerFunction;
 }
 
-person.age = 30;
-person.job = "Engineer";
-
-for( let key in person ){
-    console.log( key, ":", person[ key ] );
-}
 
