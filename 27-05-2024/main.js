@@ -1,20 +1,11 @@
-function createCounter(){
-    let count = 0;
-
-    return {
-        increment: function(){
-            count += 1;
-            return count;
-        },
-        decrement: function(){
-            count -= 1;
-            return count;
-        }
-    }
+const student = {
+    name: "Mario",
+    age: 15,
+    grade: "Second",
+    school: "Michelangelo Institute"
 }
 
-// console.log(createCounter().increment());
-// console.log(createCounter().decrement());
+console.log(Object.keys(student));
 
 
 
