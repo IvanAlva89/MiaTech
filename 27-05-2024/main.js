@@ -1,9 +1,13 @@
-function outerFunction(x){
-    function innerFunction(y){
-        return x + y;
+function outerFunction(x, initialValue) {
+    let result = initialValue;
+
+    function innerFunction(y) {
+        result += y;
+        return result;
     }
 
     return innerFunction;
 }
+
 
 
