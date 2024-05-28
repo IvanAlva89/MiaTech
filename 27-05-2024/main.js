@@ -1,9 +1,17 @@
-const numbers = [1, 2, 3 , 4, 5];
-const reversedNumbers = [];
+const words = [];
 
-for( let i = numbers.length-1 ; i >= 0; i-- ){
-    reversedNumbers.push( numbers[i] );
+for( let i = 0; i < 5; i++ ) {
+    let promptWords = prompt("Inserisci una parola").trim();
+
+    while( promptWords === "" || !isNaN(promptWords) ) {
+        promptWords = prompt("Riprova inserendo una parola").trim();
+    }
+
+    words.push(promptWords);
 }
 
-console.log(numbers);
-console.log(reversedNumbers);
+console.log(words);
+
+for( let i = 0; i < words.length; i++ ) {
+    if( words[i].length % 2 !== 0 ) console.log(words[i]);
+}
