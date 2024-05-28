@@ -1,14 +1,7 @@
-const student = {
-    name: "Mario",
-    age: 15,
-    grade: "Second",
-    school: "Michelangelo Institute"
-}
+const numbers = [1, 2, 3, 4, 5];
 
-const entriesStudent = Object.entries(student);
-console.log(entriesStudent);
+numbers.forEach( number => console.log(number * 2) );
 
-entriesStudent.forEach(item => console.log(`"${item[0]}: ${item[1]}"`));
-
-
+const squaredNumbers = numbers.map( number => Math.pow(number, 2) );
+console.log( squaredNumbers);
 
