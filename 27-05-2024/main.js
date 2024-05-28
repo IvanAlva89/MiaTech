@@ -1,7 +1,14 @@
-const numbers = [1, 2, 3, 4, 5];
+const students = [
+    { name: 'Mario', grade: 60 },
+    { name: 'Stefania', grade: 30 },
+    { name: 'Lorenzo', grade: 85 },
+    { name: 'Eleonora', grade: 90 },
+    { name: 'Andrea', grade: 59 },
+    { name: 'Elisabetta', grade: 72 },
+];
 
-numbers.forEach( number => console.log(number * 2) );
+const passedStudent = students.filter( student => student.grade >= 60 );
+console.log(passedStudent);
 
-const squaredNumbers = numbers.map( number => Math.pow(number, 2) );
-console.log( squaredNumbers);
-
+const failedStudent = students.find( student => student.grade < 60 );
+console.log(failedStudent);
