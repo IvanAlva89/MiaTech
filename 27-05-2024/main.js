@@ -7,4 +7,7 @@ const person = {
 person.age = 30;
 person.job = "Engineer";
 
-console.log(person.job);
+for( let key in person ){
+    console.log( key, ":", person[ key ] );
+}
+
