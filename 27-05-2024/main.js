@@ -5,7 +5,10 @@ const student = {
     school: "Michelangelo Institute"
 }
 
-console.log(Object.values(student));
+const entriesStudent = Object.entries(student);
+console.log(entriesStudent);
+
+entriesStudent.forEach(item => console.log(`"${item[0]}: ${item[1]}"`));
 
 
 
