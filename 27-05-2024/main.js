@@ -1,13 +1,20 @@
-function outerFunction(x, initialValue) {
-    let result = initialValue;
+function createCounter(){
+    let count = 0;
 
-    function innerFunction(y) {
-        result += y;
-        return result;
+    return {
+        increment: function(){
+            count += 1;
+            return count;
+        },
+        decrement: function(){
+            count -= 1;
+            return count;
+        }
     }
-
-    return innerFunction;
 }
+
+// console.log(createCounter().increment());
+// console.log(createCounter().decrement());
 
 
 
