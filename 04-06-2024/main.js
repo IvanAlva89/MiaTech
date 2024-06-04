@@ -52,6 +52,10 @@ class Automobile {
             return `${auto1.descrizione()} ha lo stesso chilometraggio di ${auto2.descrizione()}`
         }
     }
+
+    #incrementaContatore() {
+        return this.#contatoreChiamate++;
+    }
 }
 
 class Elettrica extends Automobile {
