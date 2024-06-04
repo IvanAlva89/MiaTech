@@ -96,6 +96,12 @@ Automobile.prototype.saluta = function() {
     return `Ciao, sono un'auto ${this._marca}, modello ${this._modello}`
 }
 
+class Camion extends Automobile {
+    constructor(marca, modello, anno) {
+        super(marca, modello, anno)
+    }
+}
+
 // const fiat = new Automobile("Fiat", "Panda", 2030, 100);
 // console.log(fiat.descrizione());
 // console.log(fiat.mostraChilometraggio());
