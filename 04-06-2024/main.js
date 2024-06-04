@@ -41,6 +41,16 @@ class Automobile {
             return this.mostraChilometraggio();
         }
     }
+
+    static confrontaChilometraggio(auto1, auto2) {
+        if(auto1.mostraChilometraggio() > auto2.mostraChilometraggio()) {
+            return `${auto1.descrizione()} ha un chilometraggio maggiore rispetto a ${auto2.descrizione()}`;
+        } else if (auto1.mostraChilometraggio() < auto2.mostraChilometraggio()) {
+            return `${auto2.descrizione()} ha un chilometraggio maggiore rispetto a ${auto1.descrizione()}`;
+        } else {
+            return `${auto1.descrizione()} ha lo stesso chilometraggio di ${auto2.descrizione()}`
+        }
+    }
 }
 
 class Elettrica extends Automobile {
@@ -70,6 +80,15 @@ Automobile.prototype.saluta = function() {
 // console.log(fiat.saluta());
 // console.log(fiat.mostraEta());
 // console.log(fiat._controllaChilometri());
+
+// const citroen = new Automobile("citroen", "Boh", 2020, 100);
+// console.log(citroen.descrizione());
+// console.log(citroen.aggiungiChilometri(5000000));
+// console.log(citroen.saluta());
+// console.log(citroen.mostraEta());
+// console.log(citroen._controllaChilometri());
+
+// console.log(Automobile.confrontaChilometraggio(fiat, citroen));
 
 // const toyota = new Elettrica("Toyota", "Electric", 2040, 10, 500);
 // console.log(toyota.descrizione());
