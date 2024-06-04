@@ -3,6 +3,7 @@ class Automobile {
     _modello;
     _anno;
     _chilometraggio = 0;
+    #contatoreChiamate = 0;
 
     constructor(marca, modello, anno, chilometraggio) {
         this._marca = marca;
