@@ -25,6 +25,10 @@ class Automobile {
         return this._chilometraggio;
     }
 
+    get chilometraggio() {
+        return this._chilometraggio;
+    }
+
     #calcolaEta() {
         const annoAttuale = new Date().getFullYear();
         return annoAttuale - this._anno;
@@ -86,6 +90,8 @@ Automobile.prototype.saluta = function() {
 
 // const fiat = new Automobile("Fiat", "Panda", 2030, 100);
 // console.log(fiat.descrizione());
+// console.log(fiat.mostraChilometraggio());
+// console.log(fiat.chilometraggio);
 // console.log(fiat.aggiungiChilometri(5000000));
 // console.log(fiat.aggiungiChilometri(4000000));
 // console.log(fiat.aggiungiChilometri(3000000));
