@@ -29,6 +29,14 @@ class Automobile {
         return this._chilometraggio;
     }
 
+    set chilometraggio(valore) {
+        if(this._chilometraggio <= valore) {
+            this._chilometraggio = valore;
+        } else {
+            throw new Error(`Il valore ${valore} non deve essere inferiore al valore attuale`);
+        }
+    }
+
     #calcolaEta() {
         const annoAttuale = new Date().getFullYear();
         return annoAttuale - this._anno;
@@ -92,6 +100,8 @@ Automobile.prototype.saluta = function() {
 // console.log(fiat.descrizione());
 // console.log(fiat.mostraChilometraggio());
 // console.log(fiat.chilometraggio);
+// console.log(fiat.chilometraggio = 150);
+// console.log(fiat.chilometraggio = 90);
 // console.log(fiat.aggiungiChilometri(5000000));
 // console.log(fiat.aggiungiChilometri(4000000));
 // console.log(fiat.aggiungiChilometri(3000000));
