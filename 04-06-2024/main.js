@@ -57,6 +57,10 @@ class Automobile {
     #incrementaContatore() {
         return this.#contatoreChiamate++;
     }
+
+    mostraContatoreChiamate() {
+        return this.#contatoreChiamate;
+    }
 }
 
 class Elettrica extends Automobile {
@@ -83,9 +87,13 @@ Automobile.prototype.saluta = function() {
 // const fiat = new Automobile("Fiat", "Panda", 2030, 100);
 // console.log(fiat.descrizione());
 // console.log(fiat.aggiungiChilometri(5000000));
+// console.log(fiat.aggiungiChilometri(4000000));
+// console.log(fiat.aggiungiChilometri(3000000));
+// console.log(fiat.aggiungiChilometri(2000000));
 // console.log(fiat.saluta());
 // console.log(fiat.mostraEta());
 // console.log(fiat._controllaChilometri());
+// console.log(fiat.mostraContatoreChiamate());
 
 // const citroen = new Automobile("citroen", "Boh", 2020, 100);
 // console.log(citroen.descrizione());
