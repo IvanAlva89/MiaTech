@@ -41,4 +41,18 @@ class Elettrica extends Automobile {
     }
 }
 
+Automobile.prototype.saluta = function() {
+    return `Ciao, sono un'auto ${this._marca}, modello ${this._modello}`
+}
+
+const fiat = new Automobile("Fiat", "Panda", 2030, 0);
+console.log(fiat.descrizione());
+console.log(fiat.aggiungiChilometri(50));
+console.log(fiat.saluta());
+
+const toyota = new Elettrica("Toyota", "Electric", 2040, 10, 500);
+console.log(toyota.descrizione());
+console.log(toyota.ricarica(100));
+console.log(toyota.saluta());
+
 
