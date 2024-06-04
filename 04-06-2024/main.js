@@ -17,6 +17,7 @@ class Automobile {
     }
 
     aggiungiChilometri(km) {
+        this.#incrementaContatore();
         return this._chilometraggio += km;
     }
 
