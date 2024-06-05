@@ -73,6 +73,14 @@ class Automobile {
     mostraContatoreChiamate() {
         return this.#contatoreChiamate;
     }
+
+    static verificaIstanza(obj, classe) {
+        if(obj instanceof classe) {
+            return `L'oggetto ${obj._marca} è un'istanza di ${classe.name}`;
+        } else {
+            return `L'oggetto ${obj._marca} non è un'istanza di ${classe.name}`;
+        }
+    }
 }
 
 class Elettrica extends Automobile {
@@ -154,3 +162,14 @@ class Camion extends Automobile {
 // console.log(volvo.carica(6000));
 // console.log(volvo.carica(3000));
 // console.log(volvo.carica(1500));
+
+const fiat = new Automobile("Fiat", "Panda", 2030, 100);
+console.log(fiat instanceof Automobile);
+
+const volvo = new Camion("Volvo", "Optimus", 2021, 10000);
+console.log(volvo instanceof Camion);
+
+console.log(Automobile.verificaIstanza(fiat, Automobile));
+console.log(Automobile.verificaIstanza(fiat, Camion));
+console.log(Automobile.verificaIstanza(volvo, Automobile));
+console.log(Automobile.verificaIstanza(volvo, Camion));
