@@ -97,8 +97,24 @@ Automobile.prototype.saluta = function() {
 }
 
 class Camion extends Automobile {
-    constructor(marca, modello, anno) {
+    _caricoCamion = 0;
+    _caricoMassimo;
+
+    constructor(marca, modello, anno, caricoMassimo) {
         super(marca, modello, anno)
+        this._caricoMassimo = caricoMassimo;
+    }
+
+    descrizione() {
+        return `Il camion ${this._marca}, modello ${this._modello} entrò in vendita nell'anno ${this._anno} con un carico massimo di ${this._caricoMassimo} kg`;
+    }
+
+    carica(kg) {
+        if(this._caricoCamion + kg < this._caricoMassimo) {
+            return this._caricoCamion += kg;
+        } else {
+            throw new Error("Il carico massimo del camion è stato superato");
+        }
     }
 }
 
@@ -133,4 +149,8 @@ class Camion extends Automobile {
 // console.log(toyota.aggiungiChilometri(100000));
 // console.log(toyota._controllaChilometri());
 
-
+// const volvo = new Camion("Volvo", "Optimus", 2021, 10000);
+// console.log(volvo.descrizione());
+// console.log(volvo.carica(6000));
+// console.log(volvo.carica(3000));
+// console.log(volvo.carica(1500));
