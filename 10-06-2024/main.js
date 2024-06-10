@@ -1,7 +1,10 @@
-const numbers1 = [1, 2, 3, 4, 5];
+const person = {
+    name: 'John',
+    lastName: 'Smith',
+    age: 30
+}
 
-const numbers2 = [6, 7, 8, 9, 10];
+const copyPerson = {...person, profession: 'Austronaut'};
 
-const newNumbers = [...numbers1, ...numbers2]
-
-console.log(newNumbers);
+console.log(person);
+console.log(copyPerson);
