@@ -6,6 +6,4 @@ const person = {
     city: 'Milan'
 }
 
-const {name, lastName, ...restPerson} = person;
-
-console.log(name, lastName, restPerson);
+console.log(JSON.stringify(person));
