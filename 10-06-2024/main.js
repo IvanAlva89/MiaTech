@@ -4,6 +4,6 @@ const person = {
     age: 30
 }
 
-const {name: personName, lastName: personLastName, age: personAge} = person;
+const {name, lastName, age, profession = 'Astronaut', city = 'Milan'} = person;
 
-console.log(personName, personLastName, personAge);
+console.log(name, lastName, age, profession, city);
