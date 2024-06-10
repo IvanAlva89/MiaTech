@@ -1,9 +1,8 @@
-const person = {
-    name: 'John',
-    lastName : 'Smith',
-    age: 30
-}
+const numbers = [1, 2, 3, 4, 5];
 
-const {name, lastName, age, profession = 'Astronaut', city = 'Milan'} = person;
+const copyNumbers = [...numbers];
 
-console.log(name, lastName, age, profession, city);
+numbers.push(6);
+
+console.log(numbers);
+console.log(copyNumbers);
