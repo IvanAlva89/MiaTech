@@ -1,5 +1,6 @@
 
-const sum = (...args) => args.reduce((acc, curr) => acc + curr);
+const numbers = [1, 2, 3, 4, 5];
 
-console.log(sum(21, 80));
-console.log(sum(1, 2, 3, 4, 5));
+const [firstNumber, secondNumber, ...restNumber] = numbers;
+
+console.log(firstNumber, secondNumber, restNumber);
