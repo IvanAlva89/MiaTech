@@ -1,10 +1,5 @@
-const person = {
-    name: 'John',
-    lastName: 'Smith',
-    age: 30
-}
 
-const copyPerson = {...person, profession: 'Austronaut'};
+const sum = (...args) => args.reduce((acc, curr) => acc + curr);
 
-console.log(person);
-console.log(copyPerson);
+console.log(sum(21, 80));
+console.log(sum(1, 2, 3, 4, 5));
