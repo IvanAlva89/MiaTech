@@ -1,3 +1,3 @@
-const message = () => console.log("Message printed after 3 seconds");
+const message = () => console.log("This message is printed every 2 seconds");
 
-setTimeout(message, 3000);
+setInterval(message, 2000);
