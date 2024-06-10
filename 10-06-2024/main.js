@@ -1,6 +1,5 @@
-const number = 25;
-const string = "Hi";
-const array = [1, 2, 3, 4];
-const person = {name: "John", age:30};
+let number = 25;
 
-console.log(number, string, array, person);
+console.error("Error: The variable is not a string");
+
+console.warn("Warning!: The variable is greater than 20");
