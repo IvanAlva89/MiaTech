@@ -1,10 +1,3 @@
-const persons = [
-    {name: 'John', age: 30},
-    {name: 'Mary', age: 34},
-    {name: 'Bob', age: 25}
-];
+const message = () => console.log("Message printed after 3 seconds");
 
-console.log("Data:")
-console.group();
-console.table(persons);
-console.groupEnd()
+setTimeout(message, 3000);
