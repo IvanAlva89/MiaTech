@@ -1,6 +1,11 @@
+const person = {
+    name: 'John',
+    lastName: 'Smith',
+    age: 30,
+    profession: 'Astronautic',
+    city: 'Milan'
+}
 
-const numbers = [1, 2, 3, 4, 5];
+const {name, lastName, ...restPerson} = person;
 
-const [firstNumber, secondNumber, ...restNumber] = numbers;
-
-console.log(firstNumber, secondNumber, restNumber);
+console.log(name, lastName, restPerson);
