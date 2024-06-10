@@ -1,5 +1,10 @@
-let number = 25;
+const persons = [
+    {name: 'John', age: 30},
+    {name: 'Mary', age: 34},
+    {name: 'Bob', age: 25}
+];
 
-console.error("Error: The variable is not a string");
-
-console.warn("Warning!: The variable is greater than 20");
+console.log("Data:")
+console.group();
+console.table(persons);
+console.groupEnd()
