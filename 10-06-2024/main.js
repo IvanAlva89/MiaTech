@@ -1,3 +1,7 @@
-const message = () => console.log("This message is printed every 2 seconds");
+const message = () => console.log("This message is printed every 1 second");
 
-setInterval(message, 2000);
+const clearMessage = setInterval(message, 1000);
+
+setTimeout(() => {
+    clearInterval(clearMessage)
+}, 5000);
