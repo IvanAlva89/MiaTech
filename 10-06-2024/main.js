@@ -1,3 +1,7 @@
-const person = '{"name":"John","lastName":"Smith","age":30,"profession":"Astronautic","city":"Milan"}';
+const listPersons = '[{"name":"John", "profession":"Astronautic"}, {"name":"Louis", "profession":"Engineer"}, {"name":"Mathew", "profession":"Writer"}]';
 
-console.log(JSON.parse(person));
+const parsePersons = JSON.parse(listPersons);
+
+parsePersons.push({name: "Elisabetta", profession: "Housewife"});
+
+console.log(JSON.stringify(parsePersons));
