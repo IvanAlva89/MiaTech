@@ -1,13 +1,11 @@
-const name = "John";
-const lastName = "Smith";
-const age = 30;
-const city = "Milan";
 
-const multiline = `
-    ${name} 
-    ${lastName} 
-    ${age} 
-    ${city}
-`;
+const person = {
+    name: "John",
+    lastName: "Smith",
+    age: 30,
+    profession: "Astronautic"
+}
 
-console.log(multiline);
+const templatePerson = (obj) => `I'm ${obj.name} ${obj.lastName}, I'm ${obj.age} years old and I'm an ${obj.profession}.`
+
+console.log(templatePerson(person));
