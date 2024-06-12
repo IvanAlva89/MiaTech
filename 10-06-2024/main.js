@@ -1,20 +1,11 @@
-// const message = () => console.log("This message is printed every 1 second");
-
-// const clearMessage = setInterval(message, 1000);
-
-// setTimeout(() => {
-//     clearInterval(clearMessage)
-// }, 5000);
-
-
-// const numbers = [1, 2];
-
-// const [firstNumber, secondNumber, thirdNumber = 3, fourthNumber = 4, fifthNumber = 5] = numbers;
-
-// console.log(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber);
-
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-const [firstNumber, , thirdNumber] = numbers;
-
-console.log(firstNumber, thirdNumber);
+try {
+    let result = 10 / 0;
+        
+    if(result === Infinity) {
+        throw new Error("Il divisore non puo essere uguale a 0");
+    }
+    
+    console.log(result);
+} catch (error) {
+    console.error("Errore: " , error.message);
+}
