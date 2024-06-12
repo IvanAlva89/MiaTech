@@ -7,8 +7,14 @@
 // }, 5000);
 
 
-const numbers = [1, 2];
+// const numbers = [1, 2];
 
-const [firstNumber, secondNumber, thirdNumber = 3, fourthNumber = 4, fifthNumber = 5] = numbers;
+// const [firstNumber, secondNumber, thirdNumber = 3, fourthNumber = 4, fifthNumber = 5] = numbers;
 
-console.log(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber);
+// console.log(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber);
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const [firstNumber, , thirdNumber] = numbers;
+
+console.log(firstNumber, thirdNumber);
