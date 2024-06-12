@@ -98,6 +98,10 @@ class Elettrica extends Automobile {
     ricarica(km) {
         return this._autonomia += km;
     }
+
+    mostraAvvisoChilometraggio() {
+        console.log(this._controlloChilometraggio());
+    }
 }
 
 Automobile.prototype.saluta = function() {
