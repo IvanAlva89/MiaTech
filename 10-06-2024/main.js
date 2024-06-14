@@ -1,15 +1,15 @@
 
-const checkVariable = (variable) => {
-    if(variable === 0) {
-        console.error("La variable non puo essere 0")
-    } else if(variable === 1) {
-        console.warn("Avviso: La variabile ha valore 1")
-    } else {
-        console.log("Variabile corretta")
-    }
-}
+// const checkVariable = (variable) => {
+//     if(variable === 0) {
+//         console.error("La variable non puo essere 0")
+//     } else if(variable === 1) {
+//         console.warn("Avviso: La variabile ha valore 1")
+//     } else {
+//         console.log("Variabile corretta")
+//     }
+// }
 
-checkVariable(1);
+// checkVariable(1);
 
 
 
@@ -26,13 +26,23 @@ checkVariable(1);
 //     console.error("Errore: " , error.message);
 // }
 
-// try {
-//     let string = "ciao";
-//     let result = string.map(word => word.length)
-//     if(!result) throw new SyntaxError("Non e un array")
-//     console.log(result);
-//     // else throw new Error("errore 2")
-// } catch (error) {
-//     if(error instanceof SyntaxError) console.log(error);
+const checkString = (string) => {
+    try {
+       const str = Number(string);
+       if(isNaN(str)) {
+            throw new TypeError("Il valore inserito non e un numero valido")
+       }
+       if(str === 0) {
+        throw new Error("Il valore non puo essere 0")
+       }
+    return str;
+    } catch (error) {
+        if(error instanceof TypeError) {
+            console.error("Errore di tipo :" , error.message)
+        } else {
+            console.error("Errore generico :", error.message)
+        }
+    } 
+}
 
-// } 
+checkString("123");
