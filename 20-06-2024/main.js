@@ -1,9 +1,8 @@
-const somma = (num1, num2, callback) => {
-    const result = num1 + num2;
-    console.log(`Il risultato è: ${result}`);
-    callback();
+const mainFn = (callback) => { 
+    const result = 1 + 4;  
+    callback(`Il risultato è ${result}`);
 }
 
-const myCallback = () => console.log("Callback Eseguita");
+const callbackFn = (result) => console.log(result);
 
-somma(1, 8, myCallback);
+mainFn(callbackFn);
