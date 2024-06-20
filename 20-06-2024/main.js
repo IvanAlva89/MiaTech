@@ -1,19 +1,26 @@
 const firstPromise = () => {
     return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("Prima promessa risolta")
-        }, 4000)
+        resolve("Prima promessa risolta")
     })
 }
 
 const secondPromise = () => {
     return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("Seconda promessa risolta")
-        }, 2000)
+        resolve("Seconda promessa risolta")
     })
 }
 
-Promise.race([firstPromise(), secondPromise()])
-    .then(value => console.log(value))
+const ThirdPromise = () => {
+    return new Promise((resolve, reject) => {
+        reject("Terza promessa rifiutata")
+    })
+}
+
+Promise.allSettled([firstPromise(), secondPromise(), ThirdPromise()])
+    .then(values => {
+        values.forEach(value => {
+            if(value.status === "fulfilled") console.log(value.value)
+            else console.log(value.reason)
+        })
+    })
     
