@@ -1,12 +1,14 @@
-const promise = () => {
+const promise = (num) => {
     return new Promise((resolve) => {
         setTimeout( () => {
-            resolve(6);
+            resolve(num);
         }, 1000) 
     })
 }
 
-promise()
-    .then(number => number * 2)
-    .then(newNumber => newNumber + 3)
-    .then(result => console.log(`Il risultato finale è ${result}`));
+promise(11)
+    .then(number => {
+        if(number % 2 === 0) return `${number} è pari`;
+        return `${number} è dispari`;
+    })
+    .then(result => console.log(result));
