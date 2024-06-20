@@ -1,14 +1,18 @@
-const promise = (num) => {
-    return new Promise((resolve) => {
-        setTimeout( () => {
-            resolve(num);
-        }, 1000) 
-    })
+const promise = () => {
+    return new Promise((resolve, reject) => {
+        let number = Math.floor(Math.random() * 10);
+        if(number >= 5) {
+            resolve(number);
+        } else {
+            reject(`Il numero: ${number} è minore di 5`);
+        }
+    })  
 }
 
-promise(11)
-    .then(number => {
-        if(number % 2 === 0) return `${number} è pari`;
-        return `${number} è dispari`;
+promise()
+    .then(num => {
+        console.log(num)
+        return num * 3;
     })
-    .then(result => console.log(result));
+    .then(result => console.log(result))
+    .catch(error => console.error(error))
