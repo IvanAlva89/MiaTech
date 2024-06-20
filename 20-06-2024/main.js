@@ -1,9 +1,15 @@
 const promise = () => {
-    return new Promise((resolve) => {
-        setTimeout( () => {
-            resolve("Promessa risolta dopo 2 secondi");
-        }, 2000)
+    return new Promise((resolve, reject) => {
+        if(!true) {
+            setTimeout( () => {
+                resolve("Promessa risolta dopo 2 secondi");
+            }, 2000)
+        } else {
+            reject("La condizione non è soddisfatta ")
+        }
     })
 }
 
-promise().then(message => console.log(message));
+promise()
+    .then(message => console.log(message))
+    .catch(error => console.log(error));
