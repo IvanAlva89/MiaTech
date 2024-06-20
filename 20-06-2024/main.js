@@ -1,18 +1,29 @@
-const promiseFn = (boolValue) => {
-    return new Promise((resolve, reject) => {
-        if(boolValue) resolve("Promessa risolta");
-        else reject(new Error("Promessa rifiutata"));
+const firstAsyncFn = async () => {
+    const message = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Prima promessa risolta")
+        }, 2000)
     })
+
+    return message;
 }
 
-const promiseAsync = async (booleanValue) => {
-    try {
-        const result = await promiseFn(booleanValue);
-        console.log(result);
-    } catch (error) {
-        console.error(error.message)
-    }
+const secondAsyncFn = async () => {
+    const message = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Seconda promessa risolta")
+        }, 5000)
+    })
+
+    return message;
 }
 
-promiseAsync(true);
-promiseAsync(false);
+const thirdAsyncFn = async () => {
+    const firstResult = await firstAsyncFn();
+    console.log(firstResult);
+
+    const secondResult = await secondAsyncFn();
+    console.log(secondResult);
+}
+
+thirdAsyncFn();
