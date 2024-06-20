@@ -1,26 +1,11 @@
-const firstPromise = () => {
-    return new Promise((resolve) => {
-        resolve("Prima promessa risolta")
+const asyncFn = async () => {
+    const message = await new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Promessa risolta dopo 3 secondi")
+        }, 3000)
     })
-}
 
-const secondPromise = () => {
-    return new Promise((resolve) => {
-        resolve("Seconda promessa risolta")
-    })
+    return message;
 }
-
-const ThirdPromise = () => {
-    return new Promise((resolve, reject) => {
-        reject("Terza promessa rifiutata")
-    })
-}
-
-Promise.allSettled([firstPromise(), secondPromise(), ThirdPromise()])
-    .then(values => {
-        values.forEach(value => {
-            if(value.status === "fulfilled") console.log(value.value)
-            else console.log(value.reason)
-        })
-    })
     
+asyncFn().then(message => console.log(message));
