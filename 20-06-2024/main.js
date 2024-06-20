@@ -1,29 +1,14 @@
-const firstAsyncFn = async () => {
-    const message = new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("Prima promessa risolta")
-        }, 2000)
-    })
+const API_KEY = "https://jsonplaceholder.typicode.com/user";
 
-    return message;
+const fetchData = async () => {
+    try {
+        const response = await fetch(API_KEY);
+        if(!response.ok) throw new Error("Si e verificato un errore durante la richiesta");
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error("Errore: ", error.message);
+    }
 }
 
-const secondAsyncFn = async () => {
-    const message = new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("Seconda promessa risolta")
-        }, 5000)
-    })
-
-    return message;
-}
-
-const thirdAsyncFn = async () => {
-    const firstResult = await firstAsyncFn();
-    console.log(firstResult);
-
-    const secondResult = await secondAsyncFn();
-    console.log(secondResult);
-}
-
-thirdAsyncFn();
+fetchData();
