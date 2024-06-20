@@ -1,4 +1,4 @@
-const API_KEY = "https://jsonplaceholder.typicode.com/user";
+const API_KEY = "https://jsonplaceholder.typicode.com/users";
 
 const fetchData = async () => {
     try {
