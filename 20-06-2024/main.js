@@ -1,16 +1,12 @@
 const promise = () => {
-    return new Promise((resolve, reject) => {
-        if(true) {
-            setTimeout( () => {
-                resolve("Promessa risolta dopo 2 secondi");
-            }, 2000)
-        } else {
-            reject("La condizione non è soddisfatta ");
-        }
+    return new Promise((resolve) => {
+        setTimeout( () => {
+            resolve(6);
+        }, 1000) 
     })
 }
 
 promise()
-    .then(message => console.log(message))
-    .catch(error => console.log(error))
-    .finally(() => console.log("Azione completata indipendentemente dall'esito della promessa"));
+    .then(number => number * 2)
+    .then(newNumber => newNumber + 3)
+    .then(result => console.log(`Il risultato finale è ${result}`));
