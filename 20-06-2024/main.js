@@ -1,8 +1,9 @@
-const mainFn = (callback) => { 
-    const result = 1 + 4;  
-    callback(`Il risultato è ${result}`);
+const promise = () => {
+    return new Promise((resolve) => {
+        setTimeout( () => {
+            resolve("Promessa risolta dopo 2 secondi");
+        }, 2000)
+    })
 }
 
-const callbackFn = (result) => console.log(result);
-
-mainFn(callbackFn);
+promise().then(message => console.log(message));
