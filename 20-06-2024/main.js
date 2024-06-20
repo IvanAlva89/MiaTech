@@ -1,11 +1,18 @@
-const asyncFn = async () => {
-    const message = await new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("Promessa risolta dopo 3 secondi")
-        }, 3000)
+const promiseFn = (boolValue) => {
+    return new Promise((resolve, reject) => {
+        if(boolValue) resolve("Promessa risolta");
+        else reject(new Error("Promessa rifiutata"));
     })
-
-    return message;
 }
-    
-asyncFn().then(message => console.log(message));
+
+const promiseAsync = async (booleanValue) => {
+    try {
+        const result = await promiseFn(booleanValue);
+        console.log(result);
+    } catch (error) {
+        console.error(error.message)
+    }
+}
+
+promiseAsync(true);
+promiseAsync(false);
