@@ -1,17 +1,37 @@
-const API_KEY = "https://jsonplaceholder.typicode.com/posts";
+const API_URL = "https://api.example.com/data";
 
-const fetchData = async () => {
-    try {
-        const response = await fetch(API_KEY);
-        if(!response.ok) throw new Error("Si e verificato un errore durante la richiesta");
-        const data = await response.json();
-        console.log(data);
-    } catch(error) {
-        console.error(error.message)
-    }
-}
+fetch(API_URL)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Errore:', error.message));
 
-fetchData();
+// const fetchData = async () => {
+//     try {
+//         const response = await fetch(API_URL);
+//         if(!response.ok) throw new Error("Si e verificato un errore durante la richiesta");
+//         const data = await response.json();
+//         console.log(data);
+//     } catch(error) {
+//         console.error(error.message);
+//     }
+// }
+
+// fetchData();
+
+// const API_KEY = "https://jsonplaceholder.typicode.com/posts";
+
+// const fetchData = async () => {
+//     try {
+//         const response = await fetch(API_KEY);
+//         if(!response.ok) throw new Error("Si e verificato un errore durante la richiesta");
+//         const data = await response.json();
+//         console.log(data);
+//     } catch(error) {
+//         console.error(error.message)
+//     }
+// }
+
+// fetchData();
 
 // const API_KEY = "https://jsonplaceholder.typicode.com/posts";
 
