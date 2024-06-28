@@ -1,6 +1,9 @@
 const API_URL = "https://api.example.com/data";
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
-fetch(API_URL)
+const mergedUrl = API_URL + proxyUrl;
+
+fetch(mergedUrl)
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Errore:', error.message));
