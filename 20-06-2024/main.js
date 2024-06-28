@@ -1,12 +1,19 @@
-const API_URL = "https://api.example.com/data";
-const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+const API_URL = "https://jsonplaceholder.typicode.com/posts";
 
-const mergedUrl = API_URL + proxyUrl;
-
-fetch(mergedUrl)
+fetch(API_URL)
     .then(response => response.json())
     .then(data => console.log(data))
-    .catch(error => console.error('Errore:', error.message));
+    .catch(error => console.error(error.message));
+
+// const API_URL = "https://api.example.com/data";
+// const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+
+// const mergedUrl = API_URL + proxyUrl;
+
+// fetch(mergedUrl)
+//     .then(response => response.json())
+//     .then(data => console.log(data))
+//     .catch(error => console.error('Errore:', error.message));
 
 // const fetchData = async () => {
 //     try {
