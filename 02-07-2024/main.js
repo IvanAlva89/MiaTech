@@ -1,8 +1,8 @@
-localStorage.setItem("nome", "Phillips");
-console.log(`Valore salvato nel localStorage: ${localStorage.nome}`);
+sessionStorage.setItem("number", 5);
+console.log(`Valore salvato nel sessionStorage: ${sessionStorage.number}`);
 
-localStorage.getItem("nome");
-console.log(`Valore recuperato dal localStorage: ${localStorage.nome}`);
+sessionStorage.getItem("number");
+console.log(`Valore recuperato dal sessionStorage: ${sessionStorage.number}`);
 
-localStorage.removeItem("nome");
-console.log(`Valore rimosso dal localStorage: ${localStorage.nome}`)
+sessionStorage.removeItem("number");
+console.log(`Valore rimosso dal sessionStorage: ${sessionStorage.number}`);
