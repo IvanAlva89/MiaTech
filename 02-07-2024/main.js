@@ -1,2 +1,2 @@
-const paragraph = document.getElementById("paragraph");
-console.log(paragraph);
+const title = document.querySelector("#title");
+console.log(title);
