@@ -1,8 +1,8 @@
-const ul = document.querySelector("ul");
-const todos = ["Mangiare", "Lavare i piatti", "Studiare Javascript", "Impazzire", "Finalmente riposarsi"];
+const form = document.querySelector("#form");
+const name = document.querySelector("#name");
+const surname = document.querySelector("#surname");
 
-todos.forEach(todo => {
-    const li = document.createElement("li");
-    li.textContent = todo;
-    ul.appendChild(li);
+form.addEventListener("submit", (e) => {
+    if(!name.value || !surname.value) alert("i campi non sono compilati");
+    e.preventDefault();
 })
