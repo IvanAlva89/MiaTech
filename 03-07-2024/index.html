@@ -5,14 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend : {
+                    colors : {
+                        primary : "#ff8b43",
+                        secondary: "#ffd350"
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container mx-auto px-4 m-4 bg-red-900">
-        <h1 class="font-bold">My first title tailwind</h1>
+        <h1 class="font-bold bg-primary">My first title tailwind</h1>
         
         <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, vitae.</p>
         <p class="text-md">Lorem ipsum dolor sit amet.</p>
-        <p class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium illum officiis voluptatibus id architecto in voluptates rerum cumque placeat ullam..</p>
+        <p class="text-sm bg-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium illum officiis voluptatibus id architecto in voluptates rerum cumque placeat ullam..</p>
     
         <ul>
             <li class="leading-relaxed">Item1</li>
