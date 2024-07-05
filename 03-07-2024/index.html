@@ -8,17 +8,21 @@
     <script>
         tailwind.config = {
             theme: {
-                extend : {
+                extend: {
                     colors : {
-                        primary : "#ff8b43",
+                        primary: "#ff8b43",
                         secondary: "#ffd350"
                     },
-                    padding : {
-                        '5px' : '5px',
-                        '3px' : '3px'
+                    padding: {
+                        '5px': '5px',
+                        '3px': '3px'
                     },
-                    margin : {
-                        '4px' : '4px'
+                    margin: {
+                        '4px': '4px'
+                    },
+                    fontSize: {
+                        '1xl': '1.5rem',
+                        '2xl': '2rem'
                     }
                 }
             }
@@ -31,11 +35,11 @@
         
         <p class="text-xl m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, vitae.</p>
         <p class="text-md p-5">Lorem ipsum dolor sit amet.</p>
-        <p class="text-sm bg-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium illum officiis voluptatibus id architecto in voluptates rerum cumque placeat ullam..</p>
+        <p class="bg-secondary text-2xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium illum officiis voluptatibus id architecto in voluptates rerum cumque placeat ullam..</p>
     
         <ul>
             <li class="leading-relaxed p-3">Item1</li>
-            <li class="leading-loose">Item2</li>
+            <li class="leading-loose text-1xl">Item2</li>
             <li class="leading-tight">Item3</li>
         </ul>
     </div>
