@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors : {
@@ -31,8 +32,8 @@
         }
     </script>
 </head>
-<body>
-    <div class="container mx-auto px-4">
+<body class="dark">
+    <div class="container mx-auto px-4 dark:bg-black dark:text-white">
         <h1 class="font-bold text-2xl">My first title tailwind</h1>
 
         <h2 class="text-tertiary">My second title</h2>
