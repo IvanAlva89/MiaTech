@@ -5,4 +5,4 @@ darkModeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 
     darkModeStatus.innerHTML = document.body.classList.contains("dark") ? "Disattiva dark mode" : "Attiva dark mode";
-})
+});
