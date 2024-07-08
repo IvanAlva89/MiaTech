@@ -31,9 +31,25 @@
             }
         }
     </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn {
+                border: 1px solid red;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .btn-primary {
+                @apply btn text-primary;
+            }
+        }
+    </style>
 </head>
 <body>
-    <form class="container mx-auto p-4">
+    <div class="container mx-auto p-4">
+        <button class="btn mx-4">Button 1</button>
+        <button class="btn-primary">Button 2</button>
+    </div>
+    <!-- <form class="container mx-auto p-4">
         <div class="my-2">
             <label for="name">Nome:</label>
             <input
@@ -68,7 +84,7 @@
             value="Invia"
             disabled
         >
-    </form>
+    </form> -->
 
     <script src="./main.js"></script>
 
