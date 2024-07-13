@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Counter = () => {
     const [counter, setCounter] = useState(0);
@@ -7,9 +7,13 @@ const Counter = () => {
     const handleReset = () => setCounter(0);
     const handleDecrement = () => setCounter(value => value - 1);
 
+    useEffect(() => {
+        console.log("valore counter aggiornato")
+    }, [counter])
+
     return (
         <>
-            <div>Count: {counter}</div>
+            <h2>Count: {counter}</h2>
             <button onClick={handleIncrement}>+1</button>
             <button onClick={handleReset}>Reset</button>
             <button onClick={handleDecrement}>-1</button>
