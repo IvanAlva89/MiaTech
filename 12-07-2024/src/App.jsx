@@ -1,6 +1,7 @@
 import React from 'react';
-import Counter from './components/Counter';
+// import Counter from './components/Counter';
 // import HelloWorld from './components/HelloWorld';
+import TextInput from './components/TextInput';
 
 const App = () => {
 
@@ -8,7 +9,8 @@ const App = () => {
     <>
       <h1>Title App</h1>
       {/* <HelloWorld /> */}
-      <Counter />
+      {/* <Counter /> */}
+      <TextInput />
     </>
   )
 }
