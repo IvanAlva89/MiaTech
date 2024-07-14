@@ -16,8 +16,13 @@ const LoginForm = () => {
         })
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert(`Username: ${form.username}, Password: ${form.password}`)
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <input 
                 type="text"
                 name="username"
@@ -32,6 +37,7 @@ const LoginForm = () => {
                 placeholder="Password"
                 onInput={handleInput}
             />
+            <input type="submit" value="Login" />
         </form>
     )
 }
