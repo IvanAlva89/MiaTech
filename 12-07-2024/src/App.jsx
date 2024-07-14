@@ -1,7 +1,8 @@
 import React from 'react';
 // import Counter from './components/Counter';
 // import HelloWorld from './components/HelloWorld';
-import TextInput from './components/TextInput';
+// import TextInput from './components/TextInput';
+import LoginForm from './components/LoginForm';
 
 const App = () => {
 
@@ -10,7 +11,8 @@ const App = () => {
       <h1>Title App</h1>
       {/* <HelloWorld /> */}
       {/* <Counter /> */}
-      <TextInput />
+      {/* <TextInput /> */}
+      <LoginForm />
     </>
   )
 }
