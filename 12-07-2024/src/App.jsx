@@ -1,11 +1,13 @@
 import React from 'react';
+import ItemList from './components/ItemList';
 // import Counter from './components/Counter';
 // import HelloWorld from './components/HelloWorld';
 // import TextInput from './components/TextInput';
 // import LoginForm from './components/LoginForm';
-import UncontrolledInput from './components/UncontrolledInput';
+// import UncontrolledInput from './components/UncontrolledInput';
 
 const App = () => {
+  const colors = ["Rosso", "Giallo", "Verde", "Bianco", "Nero", "Arancione"];
 
   return (
     <>
@@ -14,7 +16,8 @@ const App = () => {
       {/* <Counter /> */}
       {/* <TextInput /> */}
       {/* <LoginForm /> */}
-      <UncontrolledInput />
+      {/* <UncontrolledInput /> */}
+      <ItemList colors={colors}/>
     </>
   )
 }
