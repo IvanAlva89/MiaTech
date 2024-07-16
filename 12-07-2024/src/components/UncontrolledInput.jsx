@@ -4,8 +4,21 @@ const UncontrolledInput = () => {
     const inputRef = useRef();
     // console.log(inputRef);
 
+    const handleClick = () => {
+        if(!inputRef.current.value) return;
+
+        alert(inputRef.current.value);
+    }
+
     return (
-        <input type="text" ref={inputRef} />
+        <div>
+            <input type="text" ref={inputRef} />
+            <input 
+                type="submit" 
+                value="Cliccami"
+                onClick={handleClick}
+            />
+        </div>
     )
 }
 
