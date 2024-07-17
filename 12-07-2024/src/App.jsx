@@ -5,7 +5,7 @@ import React from 'react';
 // import LoginForm from './components/LoginForm';
 // import UncontrolledInput from './components/UncontrolledInput';
 // import ItemList from './components/ItemList';
-import Card from './components/Card';
+// import Card from './components/Card';
 
 const App = () => {
   // const colors = ["Rosso", "Giallo", "Verde", "Bianco", "Nero", "Arancione"];
@@ -19,10 +19,10 @@ const App = () => {
       {/* <LoginForm /> */}
       {/* <UncontrolledInput /> */}
       {/* <ItemList colors={colors}/> */}
-      <Card>
+      {/* <Card>
         <h2>Card title</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </Card>
+      </Card> */}
     </>
   )
 }
