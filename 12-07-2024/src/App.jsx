@@ -6,6 +6,7 @@ import React from 'react';
 // import UncontrolledInput from './components/UncontrolledInput';
 // import ItemList from './components/ItemList';
 // import Card from './components/Card';
+import TodoList from './components/TodoList';
 
 const App = () => {
   // const colors = ["Rosso", "Giallo", "Verde", "Bianco", "Nero", "Arancione"];
@@ -23,6 +24,7 @@ const App = () => {
         <h2>Card title</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </Card> */}
+      <TodoList />
     </>
   )
 }
