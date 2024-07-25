@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import useFetch from '../hook/useFetch';
 import useFilteredTodos from '../hook/useFilteredTodos';
 
@@ -7,9 +7,9 @@ const TodoList = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const filteredTodos = useFilteredTodos(data, searchTerm);
 
-    const handleSearch = (event) => {
+    const handleSearch = useCallback((event) => {
         setSearchTerm(event.target.value);
-    }
+    }, [])
 
     if(loading){
         return (
