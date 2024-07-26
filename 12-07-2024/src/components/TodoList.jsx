@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import useFetch from '../hook/useFetch';
 import useFilteredTodos from '../hook/useFilteredTodos';
 
@@ -7,9 +7,17 @@ const TodoList = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const filteredTodos = useFilteredTodos(data, searchTerm);
     const memoFilteredTodos = useMemo(() => filteredTodos, [filteredTodos]);
+    const inputRef = useRef();
 
     const handleSearch = useCallback((event) => {
         setSearchTerm(event.target.value);
+    }, [])
+
+    useEffect(() => {
+        // console.log(inputRef.current);
+        if(inputRef.current) {
+            inputRef.current.focus()
+        }
     }, [])
 
     if(loading){
@@ -30,6 +38,7 @@ const TodoList = () => {
                 type="text"
                 value={searchTerm}
                 onInput={handleSearch}
+                ref={inputRef}
             />
             <ul>
                 {
