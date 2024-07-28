@@ -9,12 +9,16 @@ import React from 'react';
 import TodoList from './components/TodoList';
 import { TodoProvider } from './context/TodoContext';
 
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+
 const App = () => {
   // const colors = ["Rosso", "Giallo", "Verde", "Bianco", "Nero", "Arancione"];
 
   return (
     <>
-      <h1>Title App</h1>
+      {/* <h1>Title App</h1> */}
       {/* <HelloWorld /> */}
       {/* <Counter /> */}
       {/* <TextInput /> */}
@@ -26,7 +30,11 @@ const App = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </Card> */}
       <TodoProvider>
-        <TodoList />
+        <Routes >
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+        {/* <TodoList /> */}
       </TodoProvider>
     </>
   )
