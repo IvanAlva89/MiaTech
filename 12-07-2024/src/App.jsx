@@ -13,6 +13,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Navbar from './components/Navbar';
+import PublicLayout from './components/layouts/PublicLayout';
 
 const App = () => {
   // const colors = ["Rosso", "Giallo", "Verde", "Bianco", "Nero", "Arancione"];
@@ -31,10 +32,11 @@ const App = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </Card> */}
       <TodoProvider>
-        <Navbar />
-        <Routes >
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+        <Routes>
+          <Route path="/" element={<PublicLayout />}>
+            <Route path="" element={<Home />} />
+            <Route path="about" element={<About />} />
+          </Route>
         </Routes>
         {/* <TodoList /> */}
       </TodoProvider>
