@@ -14,6 +14,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Navbar from './components/Navbar';
 import PublicLayout from './components/layouts/PublicLayout';
+import TodoDetail from './components/TodoDetail';
 
 const App = () => {
   // const colors = ["Rosso", "Giallo", "Verde", "Bianco", "Nero", "Arancione"];
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/" element={<PublicLayout />}>
             <Route path="" element={<Home />} />
             <Route path="about" element={<About />} />
+            <Route path="/todo/:id" element={<TodoDetail />} />
           </Route>
         </Routes>
         {/* <TodoList /> */}
