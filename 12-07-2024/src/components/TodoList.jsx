@@ -2,6 +2,7 @@ import React, { useState, useCallback, useMemo, useRef, useEffect, useContext } 
 import useFetch from '../hook/useFetch';
 import useFilteredTodos from '../hook/useFilteredTodos';
 import { TodoContext } from '../context/TodoContext';
+import { useSearchParams } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 
@@ -11,9 +12,11 @@ const TodoList = () => {
     const filteredTodos = useFilteredTodos(todoList, searchTerm);
     const memoFilteredTodos = useMemo(() => filteredTodos, [filteredTodos]);
     const inputRef = useRef();
+    const [searchParams, setSearchParams] = useSearchParams();
 
     const handleSearch = useCallback((event) => {
         setSearchTerm(event.target.value);
+        setSearchParams({query: event.target.value});
     }, [])
 
     useEffect(() => {
