@@ -4,7 +4,7 @@ const todos: Todo[] = [];
 
 const addTodo = (title: string) => {
     const newTodo: Todo = {
-        id: new Date().getTime() + 1,
+        id: todos.length,
         title,
         completed: false
     }
@@ -13,7 +13,20 @@ const addTodo = (title: string) => {
     return newTodo;
 }
 
-// console.log(addTodo("Imparare React"));
-// console.log(addTodo("Imparare Typescript"));
-// console.log(addTodo("Imparare Javascript"))
-// console.log(todos);
+console.log(addTodo("Imparare React"));
+console.log(addTodo("Imparare Typescript"));
+console.log(addTodo("Imparare Javascript"));
+
+const assignTodoToUser = (todoId: number, userId: number) => {
+    const todo = todos.find(todo => todo.id === todoId)
+
+    if(todo) {
+        todo.userId = userId;
+        return todo;
+    }
+
+    return null;
+}
+
+assignTodoToUser(2, 1);
+console.log(todos);
