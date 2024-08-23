@@ -2,11 +2,12 @@ import { Todo } from './types';
 
 const todos: Todo[] = [];
 
-const addTodo = (title: string) => {
+const addTodo = (title: string, metadata?: any) => {
     const newTodo: Todo = {
         id: todos.length,
         title,
-        completed: false
+        completed: false,
+        metadata
     }
     todos.push(newTodo);
 
