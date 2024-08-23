@@ -51,3 +51,23 @@ const parseInput = (input: unknown) => {
 }
 
 console.log(parseInput("Hello World"));
+
+
+const updateTodo = (todo: Todo, updates: Partial<Todo>): Todo => {
+    return {
+        ...todo,
+        ...updates
+    }
+}
+
+const todoTest = {
+    id: 1,
+    title: "Hello World",
+    completed: false
+}
+
+const todoUpdate = updateTodo(todoTest, {
+    completed: true
+});
+
+console.log(todoUpdate);
