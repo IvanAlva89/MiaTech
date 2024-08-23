@@ -42,3 +42,11 @@ console.log(getUserTodos(1));
 const throwError = (message: string): never => {
     throw new Error(message);
 }
+
+const parseInput = (input: unknown) => {
+    if(typeof input === "string") return input;
+    else if(typeof input === "number") return input.toString();
+    else throwError("Invalid input");
+}
+
+console.log(parseInput("Hello World"));
