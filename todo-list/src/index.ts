@@ -1,4 +1,4 @@
-import { Todo } from './types';
+import { Todo, User } from './types';
 
 const todos: Todo[] = [];
 
@@ -71,3 +71,12 @@ const todoUpdate = updateTodo(todoTest, {
 });
 
 console.log(todoUpdate);
+
+const userTest: User = {
+    id: 2,
+    name: "Loisa",
+    email: "example@example.com",
+    todos: [{id: 1, title: "Hello World", completed: false }]
+}
+
+console.log(userTest);
