@@ -30,3 +30,10 @@ const assignTodoToUser = (todoId: number, userId: number) => {
 
 assignTodoToUser(2, 1);
 console.log(todos);
+
+
+const getUserTodos = (userId: number) => {
+    return todos.filter(todo => todo.userId ===  userId);
+}
+
+console.log(getUserTodos(1));
