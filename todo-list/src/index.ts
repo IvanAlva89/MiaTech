@@ -37,3 +37,8 @@ const getUserTodos = (userId: number) => {
 }
 
 console.log(getUserTodos(1));
+
+
+const throwError = (message: string): never => {
+    throw new Error(message);
+}
