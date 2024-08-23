@@ -1,4 +1,4 @@
-import { Todo, User } from './types';
+import { Project, Todo, User } from './types';
 
 const todos: Todo[] = [];
 
@@ -82,6 +82,16 @@ const userTest: User = {
 console.log(userTest);
 
 
-const getTodoSummary = (todo: Todo, ) => {
+const getTodoSummary = (todo: Todo): [string, boolean] => {
+    return [todo.title, todo.completed];
+}
 
+
+const createProject = (id: number, name: string, users: User[], todos: Todo[]): Project => {
+    return {
+        id,
+        name,
+        users,
+        todos 
+    }
 }
