@@ -80,3 +80,8 @@ const userTest: User = {
 }
 
 console.log(userTest);
+
+
+const getTodoSummary = (todo: Todo, ) => {
+
+}
